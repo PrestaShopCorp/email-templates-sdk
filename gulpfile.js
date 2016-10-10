@@ -115,7 +115,7 @@ gulp.task('watch', function () {
 // Download translations
 gulp.task('langs:dl', ['langs:clean'], function () {
 	['en', 'fr', 'es'].forEach(function(lang) {
-		download('http://scritik.addons.prestashop.net/request/1/contributor/dependencies/6c7a3d34fa01934e71f53aae16f2698b/'+lang)
+		download('http://addons.prestashop.com/request/1/contributor/dependencies/6c7a3d34fa01934e71f53aae16f2698b/'+lang)
 		.pipe(buffer())
 		.pipe(rename("lang.json"))
 		.pipe(gulp.dest('langs/'+lang+'/'));
