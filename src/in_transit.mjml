@@ -1,0 +1,37 @@
+<mjml>
+	<mj-include path="./src/partials/header.mjml" />
+  <mj-body>
+    <mj-container mj-class="body">
+
+			<mj-spacer height="25px" />
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column width="100%">
+
+					<mj-include path="./src/partials/logo.mjml" />
+
+					<mj-text align="center" padding="5px" font-size="28px" line-height="30px" text-transform="uppercase">${{ lang.hi_firstname_lastname }}$</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column mj-class="background-hero">
+					<mj-text padding="15px 15px 5px 15px" font-size="20px" >${{ lang.order_order_name }}$ - ${{ lang.in_transit }}$</mj-text>
+					<mj-divider mj-class="divider" border-width="1px" padding="0px 15px 15px"></mj-divider>
+					<mj-text padding="2px 15px" font-size="14px" >${{ lang.your_order_with_the_reference_order_name_is_currently_in_transit }}$</mj-text>
+					<mj-spacer height="20px" />
+					<mj-text padding="2px 15px" font-size="14px" >${{ lang.you_can_track_your_package_using_the_following_link }}$</mj-text>
+					<mj-text padding="2px 15px 15px" font-size="14px" >
+						<a href="${{ lang.followup }}$" target="_blank">${{ lang.followup }}$</a>
+					</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-include path="./src/partials/account.mjml" />
+
+			<mj-include path="./src/partials/guest_to_customer.mjml" />
+
+			<mj-include path="./src/partials/footer.mjml" />
+    </mj-container>
+  </mj-body>
+</mjml>

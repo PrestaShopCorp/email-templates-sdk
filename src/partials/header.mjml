@@ -1,0 +1,9 @@
+<mj-head>
+	<mj-title>${{ lang.message_from_shop_name }}$</mj-title>
+	<mj-attributes>
+	  <mj-class name="background-hero" background-color="#fafafa" />
+	  <mj-text font-family="Open-sans, Helvetica, Arial, sans-serif" color="#555454" />
+	  <mj-class name="divider" border-color="#555454" />
+	  <mj-class name="body" background-color="#f5f5f5" padding="20px 0px" width="650px" />
+	</mj-attributes>
+</mj-head>

@@ -1,0 +1,31 @@
+<mjml>
+	<mj-include path="./src/partials/header.mjml" />
+  <mj-body>
+    <mj-container mj-class="body">
+
+			<mj-spacer height="25px" />
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column width="100%">
+
+					<mj-include path="./src/partials/logo.mjml" />
+
+					<mj-text align="center" padding="5px" font-size="28px" line-height="30px" text-transform="uppercase">${{ lang.hi_firstname_lastname }}$</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column mj-class="background-hero">
+					<mj-text padding="15px 15px 5px 15px" font-size="20px" >${{ lang.message_from_a_customer }}$</mj-text>
+					<mj-divider mj-class="divider" border-width="1px" padding="0px 15px 15px"></mj-divider>
+					<mj-text padding="2px 15px" font-size="14px" >${{ lang.you_have_received_a_new_message_regarding_order_with_the_reference }}$ {order_name}</mj-text>
+					<mj-spacer height="20px" />
+					<mj-text padding="2px 15px" font-size="14px"><strong>${{ lang.customer }}$</strong> {firstname} {lastname} ({email})</mj-text>
+					<mj-text padding="2px 15px 15px" font-size="14px" >{message}</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-include path="./src/partials/footer.mjml" />
+    </mj-container>
+  </mj-body>
+</mjml>

@@ -1,0 +1,41 @@
+<mjml>
+	<mj-include path="./src/partials/header.mjml" />
+  <mj-body>
+    <mj-container mj-class="body">
+
+			<mj-spacer height="25px" />
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column width="100%">
+
+					<mj-include path="./src/partials/logo.mjml" />
+
+					<mj-text align="center" padding="5px" font-size="28px" line-height="30px" text-transform="uppercase">${{ lang.hi_firstname_lastname }}$</mj-text>
+					<mj-text align="center" padding="5px" font-size="16px">${{ lang.thank_you_for_shopping_with_shop_name }}$</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column mj-class="background-hero">
+					<mj-text padding="15px 15px 5px 15px" font-size="20px">${{ lang.order_order_name }}$ - ${{ lang.awaiting_wire_payment }}$</mj-text>
+					<mj-divider mj-class="divider" border-width="1px" padding="0px 15px 15px"></mj-divider>
+					<mj-text padding="2px 15px 15px" font-size="14px" >${{ lang.your_order_with_the_reference_order_name_has_been_placed_successfully_and_will_be_shipped_as_soon_as_we_receive_your_payment }}$</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column mj-class="background-hero">
+					<mj-text padding="15px 15px 5px 15px" font-size="20px">${{ lang.you_have_selected_to_pay_by_wire_transfer }}$</mj-text>
+					<mj-divider mj-class="divider" border-width="1px" padding="0px 15px 10px"></mj-divider>
+					<mj-text padding="2px 15px" font-size="14px" >${{ lang.here_are_the_bank_details_for_your_transfer }}$</mj-text>
+					<mj-text padding="2px 15px" font-size="14px" ><b>${{ lang.amount }}$</b> {total_paid}</mj-text>
+					<mj-text padding="2px 15px" font-size="14px" ><b>${{ lang.account_owner }}$</b> {bankwire_owner}</mj-text>
+					<mj-text padding="2px 15px" font-size="14px" ><b>${{ lang.account_details }}$</b> {bankwire_details}</mj-text>
+					<mj-text padding="2px 15px" font-size="14px" ><b>${{ lang.bank_address }}$</b> {bankwire_address}</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-include path="./src/partials/footer.mjml" />
+    </mj-container>
+  </mj-body>
+</mjml>

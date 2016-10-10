@@ -1,0 +1,38 @@
+<mjml>
+	<mj-include path="./src/partials/header.mjml" />
+  <mj-body>
+    <mj-container mj-class="body">
+
+			<mj-spacer height="25px" />
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column width="100%">
+
+					<mj-include path="./src/partials/logo.mjml" />
+
+					<mj-text align="center" padding="5px" font-size="28px" line-height="30px" text-transform="uppercase">${{ lang.hi_firstname_lastname }}$</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-section background-color="white" padding="30px">
+				<mj-column mj-class="background-hero">
+					<mj-text font-size="14px">{reply}</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column width="100%">
+						<mj-text padding="0px 15px" font-size="13px" >
+							${{ lang.please_do_not_reply_directly_to_this_email_we_will_not_receive_it }}$
+						</mj-text>
+						<mj-spacer height="10px" />
+						<mj-text padding="0px 15px" font-size="13px" >
+							${{ lang.in_order_to_reply_please_use_the_following_link_link }}$
+						</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-include path="./src/partials/footer.mjml" />
+    </mj-container>
+  </mj-body>
+</mjml>

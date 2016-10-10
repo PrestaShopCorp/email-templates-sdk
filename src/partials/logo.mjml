@@ -1,0 +1,10 @@
+<mj-table line-height="inherit">
+  <tr>
+    <td align="center">
+      <a href="{shop_url}" target="_blank">
+        <img alt="{shop_name}" title="{shop_name}" height="auto" src="{shop_logo}" style="border:none;border-radius:;display:block;outline:none;text-decoration:none;width:100%;height:auto;max-width:350px;">
+      </a>
+    </td>
+  </tr>
+</mj-table>
+<mj-divider mj-class="divider" padding="10px 0px"></mj-divider>

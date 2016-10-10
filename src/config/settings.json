@@ -1,0 +1,21 @@
+{
+  "product_key": "",
+  "name": "preston",
+  "version": "1.0",
+  "inputs": [
+    {
+      "type": "text",
+      "name": "var_name",
+      "default": "foo",
+      "required": false,
+      "label": {
+        "en": "English label",
+        "fr": "French label"
+      },
+      "desc": {
+        "en": "English description",
+        "fr": "French description"
+      }
+    }
+  ]
+}

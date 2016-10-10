@@ -1,0 +1,30 @@
+<mjml>
+	<mj-include path="./src/partials/header.mjml" />
+  <mj-body>
+    <mj-container mj-class="body">
+
+			<mj-spacer height="25px" />
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column width="100%">
+
+					<mj-include path="./src/partials/logo.mjml" />
+
+					<mj-text align="center" padding="5px" font-size="28px" line-height="30px" text-transform="uppercase">${{ lang.hi_firstname_lastname }}$</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column mj-class="background-hero">
+					<mj-text padding="15px 15px 5px 15px" font-size="20px" >${{ lang.return_id_order_return__update }}$</mj-text>
+					<mj-divider mj-class="divider" border-width="1px" padding="0px 15px 15px"></mj-divider>
+					<mj-text padding="2px 15px 15px" font-size="14px" >${{ lang.we_have_updated_the_progress_on_your_return_id_order_return_the_new_status_is }}$ {state_order_return}</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-include path="./src/partials/account.mjml" />
+
+			<mj-include path="./src/partials/footer.mjml" />
+    </mj-container>
+  </mj-body>
+</mjml>

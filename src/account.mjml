@@ -1,0 +1,45 @@
+<mjml>
+	<mj-include path="./src/partials/header.mjml" />
+  <mj-body>
+    <mj-container mj-class="body">
+
+			<mj-spacer height="25px" />
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column width="100%">
+
+					<mj-include path="./src/partials/logo.mjml" />
+
+					<mj-text align="center" padding="5px" font-size="28px" line-height="30px" text-transform="uppercase">${{ lang.hi_firstname_lastname }}$</mj-text>
+					<mj-text align="center" padding="5px" font-size="16px">${{ lang.thank_you_for_creating_a_customer_account_at_shop_name }}$</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column mj-class="background-hero">
+					<mj-text padding="15px 15px 5px 15px" font-size="20px" >${{ lang.your_shop_name_login_details }}$</mj-text>
+					<mj-divider mj-class="divider" border-width="1px" padding="0px 15px 15px"></mj-divider>
+					<mj-text padding="2px 15px" font-size="14px" >${{ lang.here_are_your_login_details }}$</mj-text>
+					<mj-text padding="2px 15px 15px" font-size="14px" font-weight="bold" >${{ lang.email_address }}$ {email}</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-section background-color="white" padding="20px">
+				<mj-column mj-class="background-hero">
+					<mj-text padding="15px 15px 5px 15px" font-size="20px">${{ lang.important_security_tips }}$</mj-text>
+					<mj-divider mj-class="divider" border-width="1px" padding="0px 15px 10px"></mj-divider>
+					<mj-text padding="2px 15px 2px 5px" font-size="14px" line-height="20px" >
+						<ol>
+							<li>${{ lang.always_keep_your_account_details_safe }}$</li>
+							<li>${{ lang.never_disclose_your_login_details_to_anyone }}$</li>
+							<li>${{ lang.change_your_password_regularly }}$</li>
+							<li>${{ lang.should_you_suspect_someone_is_using_your_account_illegally_please_notify_us_immediately }}$</li>
+						</ol>
+					</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-include path="./src/partials/footer.mjml" />
+    </mj-container>
+  </mj-body>
+</mjml>

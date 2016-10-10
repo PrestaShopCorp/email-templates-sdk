@@ -1,0 +1,7 @@
+<mj-section background-color="white" padding="10px 20px">
+  <mj-column width="100%">
+      <mj-text padding="0px 15px" font-size="13px">
+        ${{ lang.if_you_have_a_guest_account_you_can_follow_your_order_via_the_guest_tracking_section_on_our_shop }}$
+      </mj-text>
+  </mj-column>
+</mj-section>
