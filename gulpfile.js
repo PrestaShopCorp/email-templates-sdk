@@ -28,9 +28,10 @@ gulp.task('build:dev', function () {
 		.pipe(replace('{{/if}}', ''))
 		.pipe(replace(/{{if \$[a-z_]+}}/ig, ''))
 
-		// We need to decode some curly brackets because of MJML
+		// We need to decode some curly brackets & dollar signs because of MJML
 		.pipe(replace('%7B%7B', '{{'))
 		.pipe(replace('%7D%7D', '}}'))
+		.pipe(replace('&#36;', '$'))
 
 		// CSS injection in the header
 		.pipe(replace('</head>', '<style>'+css+'</style></head>'))
@@ -59,9 +60,10 @@ gulp.task('build:mjml', function () {
 		// Compile MJML to HTML
 		.pipe(mjml(mjmlEngine))
 
-		// We need to decode some curly brackets because of MJML
+		// We need to decode some curly brackets & dollar signs because of MJML
 		.pipe(replace('%7B%7B', '{{'))
 		.pipe(replace('%7D%7D', '}}'))
+		.pipe(replace('&#36;', '$'))
 
 		// CSS injection in the header
 		.pipe(replace('</head>', '<style>'+css+'</style></head>'))
