@@ -2,6 +2,7 @@
   "product_key": "",
   "name": "preston",
   "version": "1.0",
+  "author": "PrestaShop",
   "inputs": [
     {
       "type": "text",
