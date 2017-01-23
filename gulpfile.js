@@ -12,12 +12,12 @@ var rename = require("gulp-rename");
 var clean = require('gulp-clean');
 var fs = require('fs');
 
-var fake = require('./src/config/fake.json');
 var settings = require('./src/config/settings.json');
 
 // Compile files [dev mode]
 gulp.task('build:dev', function () {
 	var css = fs.readFileSync(__dirname+'/src/css/global.css', 'utf8');
+	var fake = require('./src/config/fake.json');
 
 	return gulp.src(['src/*.mjml'])
 
@@ -55,6 +55,8 @@ gulp.task('build:dev', function () {
 // Compile files with MJML
 gulp.task('build:mjml', function () {
 	var css = fs.readFileSync(__dirname+'/src/css/global.css', 'utf8');
+	var fake = require('./src/config/fake.json');
+
 	return gulp.src(['src/*.mjml'])
 
 		// Compile MJML to HTML
@@ -112,6 +114,7 @@ gulp.task('build', ['build:copy:settings', 'build:mjml', 'build:copy:img', 'buil
 gulp.task('watch', function () {
 	gulp.watch('src/**/*.mjml', ['build:dev']);
 	gulp.watch('src/css/global.css', ['build:dev']);
+	gulp.watch('src/config/fake.json', ['build:dev']);
 });
 
 // Download translations
