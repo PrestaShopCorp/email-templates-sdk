@@ -14,6 +14,7 @@
 	"{firstname}": "John",
 	"{lastname}": "Doe",
 	"{email}": "addons@prestashop.com",
+	"{passwd}": "**********",
 	"{order_name}": "HG56787DJSH",
 	"{order_link}": "http://www.google.com",
 	"{date}": "2042-01-01",
