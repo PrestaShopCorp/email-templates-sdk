@@ -17,7 +17,9 @@ var settings = require('./src/config/settings.json');
 // Compile files [dev mode]
 gulp.task('build:dev', function () {
 	var css = fs.readFileSync(__dirname+'/src/css/global.css', 'utf8');
-	var fake = require('./src/config/fake.json');
+	var fake_json_path = './src/config/fake.json';
+	delete require.cache[require.resolve(fake_json_path)]
+	var fake = require(fake_json_path);
 
 	return gulp.src(['src/*.mjml'])
 
