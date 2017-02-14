@@ -57,7 +57,6 @@ gulp.task('build:dev', function () {
 // Compile files with MJML
 gulp.task('build:mjml', function () {
 	var css = fs.readFileSync(__dirname+'/src/css/global.css', 'utf8');
-	var fake = require('./src/config/fake.json');
 
 	return gulp.src(['src/*.mjml'])
 
