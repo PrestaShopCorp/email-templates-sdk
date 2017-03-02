@@ -24,42 +24,42 @@ table.table-list tr.conf_body td{border: none !important; color: #919191 !import
 /**** Media Query ****/
 
 @media only screen and (max-width: 768px) {
-	.mj-inline-links a{
-		display: block !important;
-		padding: 15px 10px 5px !important;
-	}
-	.mj-inline-links a span{margin-right: 0 !important}
+    .mj-inline-links a{
+        display: block !important;
+        padding: 15px 10px 5px !important;
+    }
+    .mj-inline-links a span{margin-right: 0 !important}
 }
 
 @media only screen and (min-width: 301px) and (max-width: 500px) {
-		.table, .table-recap{width: 295px !important; margin: auto;}
-		.table-recap tr td, .conf_body td{text-align:center !important;}
-		.table-recap tr th{font-size: 10px !important}
-		.table-recap tr td{font-size: 12px !important}
-		table.table-list tr td {width: 100% !important}
-		table.table-list tr td:first-child{text-align: center !important;}
-		table.table-list tr td:last-child{text-align: center !important;}
-	}
+        .table, .table-recap{width: 295px !important; margin: auto;}
+        .table-recap tr td, .conf_body td{text-align:center !important;}
+        .table-recap tr th{font-size: 10px !important}
+        .table-recap tr td{font-size: 12px !important}
+        table.table-list tr td {width: 100% !important}
+        table.table-list tr td:first-child{text-align: center !important;}
+        table.table-list tr td:last-child{text-align: center !important;}
+    }
 @media only screen and (max-device-width: 480px) {
-		.table{width: 295px!important; margin: auto;}
-		.table tr th{text-align:center!important; padding: 15px 10px !important}
-		.table td{text-align:center!important;}
-		.table td, .table th{width: auto!important;}
-		.table table, .table thead, .table tbody, .table th, .table td, .table tr {
-			display: block !important;
-		}
-		table.table-list tr td {width: 100% !important}
-		table.table-list tr td:first-child{text-align: center !important;}
-		table.table-list tr td:last-child{text-align: center !important;}
-	}
+        .table{width: 295px!important; margin: auto;}
+        .table tr th{text-align:center!important; padding: 15px 10px !important}
+        .table td{text-align:center!important;}
+        .table td, .table th{width: auto!important;}
+        .table table, .table thead, .table tbody, .table th, .table td, .table tr {
+            display: block !important;
+        }
+        table.table-list tr td {width: 100% !important}
+        table.table-list tr td:first-child{text-align: center !important;}
+        table.table-list tr td:last-child{text-align: center !important;}
+    }
 @media only screen and (max-width: 300px){
-	.table{width: 200px !important; margin: auto;}
-	.table td{text-align:center !important;}
-	.table tr td{font-size: 12px !important}
-	.table table, .table thead, .table tbody, .table th, .table td, .table tr {
-		display: block !important;
-	}
-	table.table-list tr td {width: 100% !important}
-	table.table-list tr td:first-child{text-align: center !important;}
-	table.table-list tr td:last-child{text-align: center !important;}
+    .table{width: 200px !important; margin: auto;}
+    .table td{text-align:center !important;}
+    .table tr td{font-size: 12px !important}
+    .table table, .table thead, .table tbody, .table th, .table td, .table tr {
+        display: block !important;
+    }
+    table.table-list tr td {width: 100% !important}
+    table.table-list tr td:first-child{text-align: center !important;}
+    table.table-list tr td:last-child{text-align: center !important;}
 }

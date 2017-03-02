@@ -1,33 +1,33 @@
 <mjml>
-	<mj-include path="./src/partials/header.mjml" />
-  <mj-body>
-    <mj-container mj-class="body">
+    <mj-include path="./src/partials/header.mjml" />
+    <mj-body>
+        <mj-container mj-class="body">
 
-			<mj-spacer height="25px" />
+            <mj-spacer height="25px" />
 
-			<mj-section background-color="white" padding="20px">
-				<mj-column width="100%">
+            <mj-section mj-class="section">
+                <mj-column width="100%">
 
-					<mj-include path="./src/partials/logo.mjml" />
+                    <mj-include path="./src/partials/logo.mjml" />
 
-					<mj-text align="center" padding="5px" font-size="28px" line-height="30px" text-transform="uppercase">${{ lang.hi_firstname_lastname }}$</mj-text>
-					<mj-text align="center" padding="5px" font-size="16px">${{ lang.thank_you_for_your_order_with_the_reference_order_name_from_shop_name }}$</mj-text>
-				</mj-column>
-			</mj-section>
+                    <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+                    <mj-text mj-class="subtitle">${{ lang.thank_you_for_your_order_with_the_reference_order_name_from_shop_name }}$</mj-text>
+                </mj-column>
+            </mj-section>
 
-			<mj-section background-color="white" padding="20px">
-				<mj-column mj-class="background-hero">
-					<mj-text padding="15px 15px 5px 15px" font-size="20px">${{ lang.order_order_name }}$ - ${{ lang.items_out_of_stock }}$</mj-text>
-					<mj-divider mj-class="divider" border-width="1px" padding="0px 15px 15px"></mj-divider>
-					<mj-text padding="2px 15px 15px" font-size="14px" >${{ lang.unfortunately_one_or_more_items_are_currently_out_of_stock_this_may_cause_a_slight_delay_in_your_delivery_please_accept_our_apologies_and_rest_assured_that_we_are_working_hard_to_rectify_this }}$</mj-text>
-				</mj-column>
-			</mj-section>
+            <mj-section mj-class="section">
+                <mj-column mj-class="background-hero">
+                    <mj-text mj-class="title-hero">${{ lang.order_order_name }}$ - ${{ lang.items_out_of_stock }}$</mj-text>
+                    <mj-divider mj-class="title-divider-hero"></mj-divider>
+                    <mj-text padding-bottom="15px">${{ lang.unfortunately_one_or_more_items_are_currently_out_of_stock_this_may_cause_a_slight_delay_in_your_delivery_please_accept_our_apologies_and_rest_assured_that_we_are_working_hard_to_rectify_this }}$</mj-text>
+                </mj-column>
+            </mj-section>
 
-			<mj-include path="./src/partials/account.mjml" />
+            <mj-include path="./src/partials/account.mjml" />
 
-			<mj-include path="./src/partials/guest_to_customer.mjml" />
+            <mj-include path="./src/partials/guest_to_customer.mjml" />
 
-			<mj-include path="./src/partials/footer.mjml" />
-    </mj-container>
-  </mj-body>
+            <mj-include path="./src/partials/footer.mjml" />
+        </mj-container>
+    </mj-body>
 </mjml>

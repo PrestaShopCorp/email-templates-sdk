@@ -1,21 +1,21 @@
 <mj-section background-color="white" padding="5px 20px">
-	<mj-inline-links base-url="">
-		<mj-raw>{{if $twitter}}</mj-raw>
-			<mj-link href="{{$twitter_link}}">
-				<img src="{{$mails_img_url}}/twitter.png" alt="Twitter" width="45px" height="45px" />
-			</mj-link>
-		<mj-raw>{{/if}}</mj-raw>
-		<mj-raw>{{if $facebook}}</mj-raw>
-			<mj-link href="{{$facebook_link}}">
-				<img src="{{$mails_img_url}}/facebook.png" alt="Facebook" width="45px" height="45px" />
-			</mj-link>
-		<mj-raw>{{/if}}</mj-raw>
-	</mj-inline-links>
+    <mj-inline-links base-url="">
+        <mj-raw>{{if $twitter}}</mj-raw>
+            <mj-link href="{{$twitter_link}}">
+                <img src="{{$mails_img_url}}/twitter.png" alt="Twitter" width="45px" height="45px" />
+            </mj-link>
+        <mj-raw>{{/if}}</mj-raw>
+        <mj-raw>{{if $facebook}}</mj-raw>
+            <mj-link href="{{$facebook_link}}">
+                <img src="{{$mails_img_url}}/facebook.png" alt="Facebook" width="45px" height="45px" />
+            </mj-link>
+        <mj-raw>{{/if}}</mj-raw>
+    </mj-inline-links>
 </mj-section>
 
 <mj-section background-color="white" padding="5px 20px">
-	<mj-column>
-		<mj-divider mj-class="divider" padding="10px 0px"></mj-divider>
-		<mj-text align="center">${{ lang.shop_name_powered_by_prestashop }}$</mj-text>
-	<mj-column>
+    <mj-column>
+        <mj-divider mj-class="divider" padding="10px 0px"></mj-divider>
+        <mj-text align="center">${{ lang.shop_name_powered_by_prestashop }}$</mj-text>
+    <mj-column>
 </mj-section>

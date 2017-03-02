@@ -1,41 +1,41 @@
 <mjml>
-	<mj-include path="./src/partials/header.mjml" />
-  <mj-body>
-    <mj-container mj-class="body">
+    <mj-include path="./src/partials/header.mjml" />
+    <mj-body>
+        <mj-container mj-class="body">
 
-			<mj-spacer height="25px" />
+            <mj-spacer height="25px" />
 
-			<mj-section background-color="white" padding="20px">
-				<mj-column width="100%">
+            <mj-section mj-class="section">
+                <mj-column width="100%">
 
-					<mj-include path="./src/partials/logo.mjml" />
+                    <mj-include path="./src/partials/logo.mjml" />
 
-					<mj-text align="center" padding="5px" font-size="28px" line-height="30px" text-transform="uppercase">${{ lang.hi_firstname_lastname }}$</mj-text>
-					<mj-text align="center" padding="5px" font-size="16px">${{ lang.thank_you_for_shopping_with_shop_name }}$</mj-text>
-				</mj-column>
-			</mj-section>
+                    <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+                    <mj-text mj-class="subtitle">${{ lang.thank_you_for_shopping_with_shop_name }}$</mj-text>
+                </mj-column>
+            </mj-section>
 
-			<mj-section background-color="white" padding="20px">
-				<mj-column mj-class="background-hero">
-					<mj-text padding="15px 15px 5px 15px" font-size="20px">${{ lang.order_order_name }}$ - ${{ lang.awaiting_check_payment }}$</mj-text>
-					<mj-divider mj-class="divider" border-width="1px" padding="0px 15px 15px"></mj-divider>
-					<mj-text padding="2px 15px 15px" font-size="14px" >${{ lang.your_order_with_the_reference_order_name_has_been_placed_successfully_and_will_be_shipped_as_soon_as_we_receive_your_payment }}$</mj-text>
-				</mj-column>
-			</mj-section>
+            <mj-section mj-class="section">
+                <mj-column mj-class="background-hero">
+                    <mj-text mj-class="title-hero">${{ lang.order_order_name }}$ - ${{ lang.awaiting_check_payment }}$</mj-text>
+                    <mj-divider mj-class="title-divider-hero"></mj-divider>
+                    <mj-text padding-bottom="15px">${{ lang.your_order_with_the_reference_order_name_has_been_placed_successfully_and_will_be_shipped_as_soon_as_we_receive_your_payment }}$</mj-text>
+                </mj-column>
+            </mj-section>
 
-			<mj-section background-color="white" padding="20px">
-				<mj-column mj-class="background-hero">
-					<mj-text padding="15px 15px 5px 15px" font-size="20px">${{ lang.you_have_selected_to_pay_by_check }}$</mj-text>
-					<mj-divider mj-class="divider" border-width="1px" padding="0px 15px 10px"></mj-divider>
-					<mj-text padding="2px 15px" font-size="14px">${{ lang.here_are_the_bank_details_for_your_check }}$</mj-text>
-					<mj-text padding="2px 15px" font-size="14px"><b>${{ lang.amount }}$</b> {total_paid}</mj-text>
-					<mj-text padding="2px 15px" font-size="14px"><b>${{ lang.payable_to_the_order_of }}$</b> {cheque_name}</mj-text>
-					<mj-text padding="2px 15px" font-size="14px" font-weight="bold">${{ lang.please_mail_your_check_to }}$</mj-text>
-					<mj-text padding="2px 15px" font-size="14px">{cheque_address_html}</mj-text>
-				</mj-column>
-			</mj-section>
+            <mj-section mj-class="section">
+                <mj-column mj-class="background-hero">
+                    <mj-text mj-class="title-hero">${{ lang.you_have_selected_to_pay_by_check }}$</mj-text>
+                    <mj-divider mj-class="title-divider-hero"></mj-divider>
+                    <mj-text>${{ lang.here_are_the_bank_details_for_your_check }}$</mj-text>
+                    <mj-text><b>${{ lang.amount }}$</b> {total_paid}</mj-text>
+                    <mj-text><b>${{ lang.payable_to_the_order_of }}$</b> {cheque_name}</mj-text>
+                    <mj-text font-weight="bold">${{ lang.please_mail_your_check_to }}$</mj-text>
+                    <mj-text padding-bottom="15px">{cheque_address_html}</mj-text>
+                </mj-column>
+            </mj-section>
 
-			<mj-include path="./src/partials/footer.mjml" />
-    </mj-container>
-  </mj-body>
+            <mj-include path="./src/partials/footer.mjml" />
+        </mj-container>
+    </mj-body>
 </mjml>
