@@ -1,0 +1,30 @@
+<mjml>
+    <mj-include path="./src/partials/header.mjml" />
+      <mj-body>
+            <mj-container mj-class="body">
+
+            <mj-spacer height="25px" />
+
+            <mj-section mj-class="section">
+                <mj-column width="100%">
+                    <mj-include path="./src/partials/logo.mjml" />
+                    <mj-text mj-class="title">${{ lang.join_us }}$</mj-text>
+                </mj-column>
+            </mj-section>
+
+            <mj-section mj-class="section">
+                <mj-column mj-class="background-hero">
+                    <mj-text padding-top="15px">${{ lang.your_friend_firstname_lastname_wants_to_refer_you_on_shop_name }}$</mj-text>
+                    <mj-spacer height="10px"></mj-spacer>
+                    <mj-text>${{ lang.we_are_pleased_to_offer_you_a_voucher_worth_discount_that_you_can_use_on_your_next_order }}$</mj-text>
+                    <mj-spacer height="10px"></mj-spacer>
+                    <mj-text><a title="{shop_name}" href="{link}">${{ lang.its_very_easy_to_sign_up_just_click_here }}$</a></mj-text>
+                    <mj-spacer height="10px"></mj-spacer>
+                    <mj-text padding-bottom="15px">${{ lang.when_signing_up_dont_forget_to_provide_the_email_address_of_your_referring_friend }}$</mj-text>
+                </mj-column>
+            </mj-section>
+
+            <mj-include path="./src/partials/footer.mjml" />
+        </mj-container>
+    </mj-body>
+</mjml>

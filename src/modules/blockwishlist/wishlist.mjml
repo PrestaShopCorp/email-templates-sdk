@@ -1,0 +1,29 @@
+<mjml>
+    <mj-include path="./src/partials/header.mjml" />
+    <mj-body>
+        <mj-container mj-class="body">
+
+            <mj-spacer height="25px" />
+
+            <mj-section mj-class="section">
+                <mj-column width="100%">
+
+                    <mj-include path="./src/partials/logo.mjml" />
+
+                    <mj-text mj-class="title">${{ lang.hi }}$</mj-text>
+                </mj-column>
+            </mj-section>
+
+            <mj-section mj-class="section">
+                <mj-column mj-class="background-hero">
+                    <mj-text mj-class="title">${{ lang.message_from_shop_name }}$</mj-text>
+                    <mj-divider mj-class="title-divider-hero"></mj-divider>
+                    <mj-text>${{ lang.firstname_lastname_indicated_you_may_want_to_see_hisher_wishlist }}$</mj-text>
+                    <mj-text padding-bottom="15px"><a title="WishList" href="{message}">{wishlist}</a></mj-text>
+                </mj-column>
+            </mj-section>
+
+            <mj-include path="./src/partials/footer.mjml" />
+        </mj-container>
+    </mj-body>
+</mjml>
