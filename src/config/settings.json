@@ -35,6 +35,71 @@
         "en": "English description",
         "fr": "French description"
       }
-    }
+    },
+    {
+      "type": "switch",
+      "name": "var_name_switch",
+      "default": "",
+      "required": true,
+      "is_bool": true,
+      "values": [
+        {
+          "id": "active_on",
+          "value": true,
+          "label": {
+            "en": "Yes",
+            "fr": "Oui"
+          }
+        },
+        {
+          "id": "active_off",
+          "value": false,
+          "label": {
+            "en": "No",
+            "fr": "Non"
+           }
+         }
+       ],
+       "label": {
+         "en": "Display it?",
+         "fr": "Afficher ça?"
+       },
+       "desc": {
+         "en": "",
+         "fr": ""
+       }
+    },
+    {
+      "type": "radio",
+      "name": "var_name_radio",
+      "default": "left",
+      "required": true,
+      "values": [
+        {
+          "id": "yes",
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "fr": "Oui"
+          }
+        },
+        {
+          "id": "no",
+          "value": "no",
+          "label": {
+            "en": "No",
+            "fr": "Non"
+          }
+        }
+      ],
+      "label": {
+        "en": "Display it?",
+        "fr": "Afficher ça?"
+      },
+      "desc": {
+        "en": "",
+        "fr": ""
+        }
+      }
   ]
 }
