@@ -100,6 +100,20 @@
         "en": "",
         "fr": ""
         }
+      },
+      {
+        "type": "file",
+        "name": "hero_img",
+        "default": "my_image.jpg",
+        "required": true,
+        "label": {
+          "en": "Image",
+          "fr": "Image"
+         },
+         "desc": {
+           "en": "We recommend a 650px width and 200px minimum height picture",
+           "fr": "Une image d'une largeur de 650px et d'une hauteur minimum de 200px est recommandée."
+         }
       }
   ]
 }
