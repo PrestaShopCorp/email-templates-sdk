@@ -1,6 +1,5 @@
 const THEME = 'preston';
 
-
 var gulp = require('gulp');
 var mjml = require('gulp-mjml')
 var mjmlEngine = require('mjml')
@@ -15,21 +14,17 @@ var rename = require("gulp-rename");
 var clean = require('gulp-clean');
 var fs = require('fs');
 
-// var settings = require('./src/config/settings.json');
-var settings = JSON.parse(fs.readFileSync(`src/${THEME}/config/settings.json`));
+var settings = JSON.parse(fs.readFileSync(`themes/${THEME}/src/config/settings.json`));
 
 // Compile files [dev mode]
 gulp.task('build:dev', function () {
-	process.chdir(`src/${THEME}/`);
-	// var css = fs.readFileSync(__dirname+'/src/css/global.css', 'utf8');
-	// var fake_json_path = './src/config/fake.json';
-	// delete require.cache[require.resolve(fake_json_path)]
-	// var fake = require(fake_json_path);
-	// var fake = JSON.parse(fs.readFileSync(`./src/${THEME}/config/fake.json`));
-	var fake = JSON.parse(fs.readFileSync(`./config/fake.json`));
+	process.chdir(`./themes/${THEME}/`);
+
+	// var css = fs.readFileSync(`./src/css/global.css`, 'utf8');
+	var fake = JSON.parse(fs.readFileSync(`./src/config/fake.json`));
 
 	// return gulp.src(['./src/${THEME}/*.mjml'])
-	return gulp.src(['./*.mjml'])
+	return gulp.src(['./src/*.mjml'])
 
 		// Compile MJML to HTML
 		.pipe(mjml(mjmlEngine))
@@ -60,15 +55,16 @@ gulp.task('build:dev', function () {
 			usePrefix: false
 		}))
 
-		.pipe(gulp.dest(`./../../dist/${THEME}/html/`))
+		.pipe(gulp.dest(`./dist/html/`))
 });
 
 // Compile files with MJML
 gulp.task('build:mjml', function () {
-	// var css = fs.readFileSync(__dirname+'/src/css/global.css', 'utf8');
-	// var css = fs.readFileSync(`./src/${THEME}/css/global.css`, 'utf8');
+	process.chdir(`./themes/${THEME}/`);
 
-	return gulp.src([`./src/${THEME}/*.mjml`])
+	// var css = fs.readFileSync(`./src/css/global.css`, 'utf8');
+
+	return gulp.src([`./src/*.mjml`])
 
 		// Compile MJML to HTML
 		.pipe(mjml(mjmlEngine))
@@ -84,49 +80,38 @@ gulp.task('build:mjml', function () {
 		// Rename files
 		.pipe(ext_replace('.tpl'))
 
-		.pipe(gulp.dest(`./dist/${THEME}/work/`))
+		.pipe(gulp.dest(`./dist/work/`))
 });
 
 // Copy images in dist folder
 gulp.task('build:copy:img', function() {
-	// return gulp.src('src/img/*.{jpg,jpeg,png,gif}')
-	//				.pipe(gulp.dest('./dist/'+settings.name+'/img/'));
-	return gulp.src(`./src/${THEME}/img/*.{jpg,jpeg,png,gif}`)
-		.pipe(gulp.dest(`./dist/${THEME}/work/img/`));
+	return gulp.src(`./themes/${THEME}/src/img/*.{jpg,jpeg,png,gif}`)
+		.pipe(gulp.dest(`./themes/${THEME}/dist/work/img/`));
 });
 
 // Copy tpls in dist folder
 gulp.task('build:copy:tpl', function () {
-		// return gulp.src('src/*.tpl')
-		// 	.pipe(gulp.dest('./dist/'+settings.name+'/tpl/'));
-	return gulp.src(`./src/${THEME}/img/*.tpl`)
-		.pipe(gulp.dest(`./dist/${THEME}/work/tpl/`));
+	return gulp.src(`./themes/${THEME}/src/img/*.tpl`)
+		.pipe(gulp.dest(`./themes/${THEME}/dist/work/tpl/`));
 });
 
 // Copy preview img in dist folder
 gulp.task('build:copy:preview', function() {
-	// return gulp.src('src/preview.jpg')
-	// 				.pipe(gulp.dest('./dist/'+settings.name+'/'));
-	return gulp.src(`./src/${THEME}/preview.jpg`)
-		.pipe(gulp.dest(`./dist/${THEME}/work/`));
+	return gulp.src(`./themes/${THEME}/src/preview.jpg`)
+		.pipe(gulp.dest(`./themes/${THEME}/dist/work/`));
 });
 
 // Copy settings in dist folder
 gulp.task('build:copy:settings', function() {
-	// return gulp.src('src/config/settings.json')
-	// 			.pipe(gulp.dest('./dist/'+settings.name+'/'));
-	return gulp.src(`./src/${THEME}/config/settings.json`)
-		.pipe(gulp.dest(`./dist/${THEME}/work/`));
+	return gulp.src(`./themes/${THEME}/src/config/settings.json`)
+		.pipe(gulp.dest(`./themes/${THEME}/dist/work/`));
 });
 
 // Compress folder
 gulp.task('build:compress', ['build:copy:settings', 'build:mjml', 'build:copy:tpl', 'build:copy:img', 'build:copy:preview'], function() {
-	// return gulp.src('./dist/'+settings.name+'/**/*')
-	// 					.pipe(zip(settings.name+'.zip'))
-	// 					.pipe(gulp.dest('./dist/'));
-	return gulp.src(`./dist/${THEME}/work/**/*`)
+	return gulp.src(`./themes/${THEME}/dist/work/**/*`)
 		.pipe(zip(settings.name+'.zip'))
-		.pipe(gulp.dest(`./dist/${THEME}/`));
+		.pipe(gulp.dest(`./themes/${THEME}/dist/`));
 });
 
 // Copy images in dist folder
@@ -134,12 +119,9 @@ gulp.task('build', ['build:copy:settings', 'build:mjml', 'build:copy:img', 'buil
 
 // Watch changes
 gulp.task('watch', function () {
-	// gulp.watch('src/**/*.mjml', ['build:dev']);
-	// gulp.watch('src/css/global.css', ['build:dev']);
-	// gulp.watch('src/config/fake.json', ['build:dev']);
-	gulp.watch(`src/${THEME}/**/*.mjml`, ['build:dev']);
-	gulp.watch(`src/${THEME}/css/global.css`, ['build:dev']);
-	gulp.watch(`src/${THEME}/config/fake.json`, ['build:dev']);
+	gulp.watch(`themes/${THEME}/src/**/*.mjml`, ['build:dev']);
+	gulp.watch(`themes/${THEME}/src/css/global.css`, ['build:dev']);
+	gulp.watch(`themes/${THEME}/src/config/fake.json`, ['build:dev']);
 });
 
 // Download translations
