@@ -114,6 +114,37 @@
         "en": "We recommend a 650px width and 200px minimum height picture",
         "fr": "Une image d'une largeur de 650px et d'une hauteur minimum de 200px est recommandée."
       }
+    },
+    {
+      "type": "select",
+      "name": "var_name_select",
+      "default": "1",
+      "required": false,
+      "multiple": false,
+      "values": [
+        {
+          "id": "1",
+          "label": {
+            "en": "First choice",
+            "fr": "Premier choix"
+          }
+        },
+        {
+          "id": "2",
+          "label": {
+            "en": "Second choice",
+            "fr": "Second choix"
+          }
+        }
+      ],
+      "label": {
+        "en": "Choice",
+        "fr": "Choix"
+      },
+      "desc": {
+        "en": "",
+        "fr": ""
+        }
     }
   ]
 }
