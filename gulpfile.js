@@ -101,21 +101,23 @@ gulp.task('init', function(cb)
     // Set paths
     config.path = {};
     config.path.root = `./themes/${config.theme}`;
-    config.path.langs = `./langs`;
+    config.path.langs = `../../langs`;
     config.path.in = {};
-    config.path.in.root = `${config.path.root}/src`;
+    config.path.in.root = `./src`;
     config.path.in.settings = `${config.path.in.root}/config/settings.json`;
     config.path.in.fake = `${config.path.in.root}/config/fake.json`;
     config.path.in.mjml = config.path.in.root;
     config.path.in.images = `${config.path.in.root}/img`;
     config.path.out = {};
-    config.path.out.root = `${config.path.root}/dist`;
+    config.path.out.root = `./dist`;
     config.path.out.tmp = `${config.path.out.root}/work`;
     config.path.out.dev = `${config.path.out.root}/html`;
 
     if (config.debug) {
         gutil.log(gutil.colors.cyan('Global configuration:'), gutil.colors.yellow(JSON.stringify(config)));
     }
+
+    process.chdir(config.path.root);
 
     // Load theme configuration file
     if (!fs.existsSync(config.path.in.settings)) {
