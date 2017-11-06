@@ -173,7 +173,7 @@ gulp.task('build:mjml', function ()
  */
 gulp.task('build:copy:img', function()
 {
-    return gulp.src(`${config.path.in.images}*.{jpg,jpeg,png,gif}`)
+    return gulp.src(`${config.path.in.images}/*.{jpg,jpeg,png,gif}`)
         .pipe(gulp.dest(`${config.path.out.tmp}/img/`));
 });
 
