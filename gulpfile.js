@@ -151,7 +151,7 @@ gulp.task('build:copy:settings', function()
  */
 gulp.task('build:mjml', function ()
 {
-    return gulp.src([`${config.path.in.mjml}/*.mjml`])
+    return gulp.src([`${config.path.in.mjml}/**/*.mjml`, `!${config.path.in.mjml}/partials/*.mjml`])
         // Compile MJML to HTML
         .pipe(mjml(mjmlEngine))
 
@@ -226,7 +226,7 @@ gulp.task('build:test', function ()
     }
     config.fixtures = JSON.parse(fs.readFileSync(config.path.in.fake));
 
-    return gulp.src([`${config.path.in.mjml}/*.mjml`])
+    return gulp.src([`${config.path.in.mjml}/.**/*.mjml`, `!${config.path.in.mjml}/partials/*.mjml`])
 
         // Compile MJML to HTML
         .pipe(mjml(mjmlEngine))
