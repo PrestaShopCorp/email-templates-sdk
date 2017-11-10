@@ -2,6 +2,8 @@
 
 The PrestaShop Emails SDK is a toolkit to create custom emails for PrestaShop 1.5, 1.6 and 1.7.
 
+Customized by BM Services to build multiple themes in `themes` folder
+
 ## Installation
 
 You first need to install [Node.js](https://nodejs.org).
@@ -28,7 +30,7 @@ During development, you just need to watch files:
 
 `gulp watch`
 
-This will detect changes on your files and output a compiled version in `./dist/en/`.  
+This will detect changes on your files and output a compiled version in `./themes/${THEME}/en/`.
 3 languages are available during development but more languages are available when the emails are installed on PrestaShop. More information below.
 
 ## Build
@@ -37,7 +39,7 @@ To install the emails on PrestaShop, you need to build a package:
 
 `gulp build`
 
-This will create a zip file in `./dist/` with the name you set in the `./src/config/settings.json`.
+This will create a zip file in `./themes/${THEME}/dist/` with the name you set in the `./themes/${THEME}/src/config/settings.json`.
 
 To install the zip file that contains the emails, you need to use the Emails Manager available in the PrestaShop back office (soon).
 This is also this file you will need to submit on [PrestaShop Addons](https://addons.prestashop.com) if you want to sell it.
@@ -67,7 +69,7 @@ In order to allow the merchants to customize they emails, you can create dynamic
 
 `{{$my_var}}`
 
-For every variable, you need to declare it in `./src/config/settings.json`
+For every variable, you need to declare it in `./themes/${THEME}/src/config/settings.json`
 
 ```
 {
@@ -96,7 +98,7 @@ For every variable, you need to declare it in `./src/config/settings.json`
 
 ```
 
-To help you during your development, you can use the `./src/config/fake.json` to declare fake data. This will replace the variables in the compiled versions.
+To help you during your development, you can use the `./themes/${THEME}/src/config/fake.json` to declare fake data. This will replace the variables in the compiled versions.
 
 You can replace :
 

@@ -1,0 +1,27 @@
+<mjml>
+    <mj-include path="./src/partials/header.mjml" />
+    <mj-body>
+        <mj-container mj-class="body">
+
+            <mj-spacer height="25px" />
+
+            <mj-section mj-class="section">
+                <mj-column width="100%">
+
+                    <mj-include path="./src/partials/logo.mjml" />
+
+                    <mj-text mj-class="title">${{ lang.hi }}$</mj-text>
+                </mj-column>
+            </mj-section>
+
+            <mj-section mj-class="section">
+                <mj-column mj-class="background-hero">
+                    <mj-text padding-top="5px">${{ lang.thank_you_for_subscribing_to_our_newsletter_please_confirm_your_request_by_clicking_the_link_below }}$</mj-text>
+                    <mj-text padding-bottom="5px"><a href="{verif_url}" style="color:#337ff1">{verif_url}</a></mj-text>
+                </mj-column>
+            </mj-section>
+
+            <mj-include path="./src/partials/footer.mjml" />
+        </mj-container>
+    </mj-body>
+</mjml>
