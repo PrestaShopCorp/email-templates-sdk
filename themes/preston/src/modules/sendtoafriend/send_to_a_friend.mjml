@@ -1,0 +1,29 @@
+<mjml>
+    <mj-include path="./src/partials/header.mjml" />
+    <mj-body>
+        <mj-container mj-class="body">
+
+            <mj-spacer height="25px" />
+
+            <mj-section mj-class="section">
+                <mj-column width="100%">
+
+                    <mj-include path="./src/partials/logo.mjml" />
+
+                    <mj-text mj-class="title">${{ lang.hi_name }}$</mj-text>
+                </mj-column>
+            </mj-section>
+
+            <mj-section mj-class="section">
+                <mj-column mj-class="background-hero">
+                    <mj-text mj-class="title-hero">{product}</mj-text>
+                    <mj-divider mj-class="title-divider-hero"></mj-divider>
+                    <mj-text>${{ lang.customer_has_sent_you_a_link_to_a_product_that_she_thinks_may_interest_you }}$</mj-text>
+                    <mj-text padding-bottom="10px">${{ lang.click_here_to_view_this_item }}$ <a href="{product_link}">{product}</a></mj-text>
+                </mj-column>
+            </mj-section>
+
+            <mj-include path="./src/partials/footer.mjml" />
+        </mj-container>
+    </mj-body>
+</mjml>

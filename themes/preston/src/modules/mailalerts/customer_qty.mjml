@@ -1,0 +1,32 @@
+<mjml>
+    <mj-include path="./src/partials/header.mjml" />
+    <mj-body>
+        <mj-container mj-class="body">
+
+            <mj-spacer height="25px" />
+
+            <mj-section mj-class="section">
+                <mj-column width="100%">
+
+                    <mj-include path="./src/partials/logo.mjml" />
+
+                    <mj-text mj-class="title">${{ lang.hi }}$</mj-text>
+                </mj-column>
+            </mj-section>
+
+            <mj-section mj-class="section">
+                <mj-column mj-class="background-hero">
+                    <mj-text mj-class="title-hero">${{ lang.product_is_now_available }}$</mj-text>
+                    <mj-divider mj-class="title-divider-hero"></mj-divider>
+                    <mj-text>${{ lang.this_item_is_once_again_instock }}$</mj-text>
+                    <mj-spacer height="10px"></mj-spacer>
+                    <mj-text>${{ lang.you_can_access_the_product_page_by_clicking_on_the_link }}$ <a href="{product_link}">{product}</a></mj-text>
+                    <mj-spacer height="10px"></mj-spacer>
+                    <mj-text padding-bottom="10px">${{ lang.you_can_order_it_right_now_from_our_online_shop }}$</mj-text>
+                </mj-column>
+            </mj-section>
+
+            <mj-include path="./src/partials/footer.mjml" />
+        </mj-container>
+    </mj-body>
+</mjml>
