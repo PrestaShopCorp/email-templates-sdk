@@ -3,7 +3,7 @@
   * Copyright 2016-2017 PrestaShop and contributors (https://github.com/PrestaShop/email-templates-sdk/blob/master/package.json)
   * Licensed under MIT (https://github.com/PrestaShop/email-templates-sdk/blob/master/LICENSE.md)
   *
-  * @version  2.0.0
+  * @version  2.0.2
   */
 var gulp = require('gulp');
 var gulpsync = require('gulp-sync')(gulp);
