@@ -8,7 +8,7 @@ You first need to install [Node.js](https://nodejs.org).
 
 Install Gulp:
 
-`npm install -g gulp`
+`npm install gulp-cli -g`
 
 Download or clone the repository
 
@@ -39,7 +39,7 @@ To install the emails on PrestaShop, you need to build a package:
 
 This will create a zip file in `./dist/` with the name you set in the `./src/config/settings.json`.
 
-To install the zip file that contains the emails, you need to use the Emails Manager available in the PrestaShop back office (soon).
+To install the zip file that contains the emails, you need to use the Emails Manager available in the PrestaShop back office.
 This is also this file you will need to submit on [PrestaShop Addons](https://addons.prestashop.com) if you want to sell it.
 The emails are translated by the module during the installation and the dynamic variables & conditions are processed (see "Dynamic variables" and "Conditions" for more information).
 
