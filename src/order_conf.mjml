@@ -26,7 +26,7 @@
 
             <mj-section mj-class="section">
                 <mj-column>
-                    <mj-html>
+                    <mj-raw>
                     <table class="table table-recap" padding="0" bgcolor="#f8f8f8" style="width:100%;border-collapse:collapse;font-family:Open-sans, Helvetica, Arial, sans-serif;" role="presentation">
                         <tr>
                             <th style="border:1px solid #D6D4D4;padding: 10px;">${{ lang.reference }}$</th>
@@ -98,7 +98,7 @@
                             </td>
                         </tr>
                     </table>
-                    <mj-html>
+                    <mj-raw>
                 </mj-column>
             </mj-section>
 

@@ -20,7 +20,7 @@
                     <mj-divider mj-class="title-divider-hero"></mj-divider>
                     <mj-text>${{ lang.you_have_received_a_new_message_from_shop_name_regarding_order_with_the_reference_order_name }}$</mj-text>
                     <mj-spacer height="20px" />
-                    <mj-textfont-weight="bold">${{ lang.message }}$</mj-text>
+                    <mj-text font-weight="bold">${{ lang.message }}$</mj-text>
                     <mj-text padding-bottom="15px">{message}</mj-text>
                 </mj-column>
             </mj-section>

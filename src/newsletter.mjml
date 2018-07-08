@@ -16,7 +16,7 @@
 
             <mj-section mj-class="section">
                 <mj-column width="100%">
-                    <mj-html>{message}</mj-html>
+                    <mj-raw>{message}</mj-raw>
                 </mj-column>
             </mj-section>
 
