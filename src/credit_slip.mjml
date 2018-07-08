@@ -1,10 +1,10 @@
 <mjml>
-    <mj-include path="./src/partials/header.mjml" />
+    <mj-include path="./partials/header.mjml" />
     <mj-body mj-class="body">
         <mj-spacer height="25px" />
         <mj-section mj-class="section">
             <mj-column width="100%">
-                <mj-include path="./src/partials/logo.mjml" />
+                <mj-include path="./partials/logo.mjml" />
                 <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
             </mj-column>
         </mj-section>
@@ -20,6 +20,6 @@
                 <mj-text padding="0px 15px" font-size="13px">${{ lang.you_can_review_this_credit_slip_and_download_your_invoice_from_the_my_credit_slips_section_of_your_account_by_clicking_my_account_on_our_shop }}$</mj-text>
             </mj-column>
         </mj-section>
-        <mj-include path="./src/partials/footer.mjml" />
+        <mj-include path="./partials/footer.mjml" />
     </mj-body>
 </mjml>

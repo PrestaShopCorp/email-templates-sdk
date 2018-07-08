@@ -1,10 +1,10 @@
 <mjml>
-    <mj-include path="./src/partials/header.mjml" />
+    <mj-include path="./partials/header.mjml" />
     <mj-body mj-class="body">
         <mj-spacer height="25px" />
         <mj-section mj-class="section">
             <mj-column width="100%">
-                <mj-include path="./src/partials/logo.mjml" />
+                <mj-include path="./partials/logo.mjml" />
                 <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
             </mj-column>
         </mj-section>
@@ -15,8 +15,8 @@
                 <mj-text padding-bottom="15px">${{ lang.your_order_with_the_reference_order_name_from_shop_name_has_been_canceled }}$</mj-text>
             </mj-column>
         </mj-section>
-        <mj-include path="./src/partials/account.mjml" />
-        <mj-include path="./src/partials/guest_to_customer.mjml" />
-        <mj-include path="./src/partials/footer.mjml" />
+        <mj-include path="./partials/account.mjml" />
+        <mj-include path="./partials/guest_to_customer.mjml" />
+        <mj-include path="./partials/footer.mjml" />
     </mj-body>
 </mjml>
