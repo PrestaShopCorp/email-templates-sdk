@@ -11,6 +11,9 @@ var replace = require('gulp-replace');
 var rename = require("gulp-rename");
 var fs = require('fs');
 var del = require('del');
+var through = require('through2');
+var migrate = require('mjml-migrate').default;
+var htmlBeautify = require('js-beautify').html;
 
 var settings = require('./src/config/settings.json');
 
@@ -131,6 +134,26 @@ gulp.task('langs:dl', ['langs:clean'], function () {
 // Remove previously downloaded langs
 gulp.task('langs:clean', function () {
     return del(['langs']);
+});
+
+gulp.task('mjml:migrate', function () {
+    return gulp.src(['src/*.mjml'])
+        .pipe(buffer())
+        .pipe(through.obj((file, enc, cb) => {
+                let content = file.contents.toString();
+                if (content.indexOf('<mj-container') >= 0) {
+                    content = htmlBeautify(migrate(content), {
+                        indent_size: 4,
+                        wrap_attributes_indent_size: 4,
+                        end_with_newline: true,
+                    });
+                }
+                file = file.clone()
+                file.contents = new Buffer(content)
+
+                return cb(null, file);
+        }))
+        .pipe(gulp.dest('src/'));
 });
 
 // Run all tasks if no args
