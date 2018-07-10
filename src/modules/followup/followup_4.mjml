@@ -1,0 +1,25 @@
+<mjml>
+    <mj-include path="../../partials/header.mjml" />
+    <mj-body mj-class="body">
+        <mj-spacer height="25px" />
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-include path="../../partials/logo.mjml" />
+                <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.thanks_for_your_trust }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text>${{ lang.you_are_one_of_our_best_customers_however_you_have_not_placed_an_order_in_days_threshold_days }}$</mj-text>
+                <mj-spacer height="10px" />
+                <mj-text>${{ lang.as_our_way_of_saying_thanks_we_want_to_give_you_a_discount_of_amount_off_your_next_order_this_offer_is_valid_for_days_days_so_do_not_waste_a_moment }}$</mj-text>
+                <mj-spacer height="10px" />
+                <mj-text>${{ lang.here_is_your_coupon }}$ <strong>{voucher_num}<strong></mj-text>
+                <mj-text padding-bottom="15px">${{ lang.enter_this_code_in_your_shopping_cart_to_get_your_discount }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-include path="../../partials/footer.mjml" />
+    </mj-body>
+</mjml>

@@ -1,0 +1,24 @@
+<mjml>
+    <mj-include path="../../partials/header.mjml" />
+    <mj-body mj-class="body">
+        <mj-spacer height="25px" />
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-include path="../../partials/logo.mjml" />
+                <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title">${{ lang.referral_program }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text>${{ lang.we_have_created_a_voucher_in_your_name_for_referring_a_friend }}$</mj-text>
+                <mj-spacer height="10px" />
+                <mj-text>${{ lang.here_is_the_code_of_your_voucher }}$ <strong>{voucher_num}<strong> ${{ lang.with_an_amount_of }}$ <strong>{voucher_amount}<strong>.</mj-text>
+                <mj-spacer height="10px" />
+                <mj-text padding-bottom="15px">${{ lang.simply_copypaste_this_code_during_the_payment_process_for_your_next_order }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-include path="../../partials/footer.mjml" />
+    </mj-body>
+</mjml>

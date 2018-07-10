@@ -1,0 +1,20 @@
+<mjml>
+    <mj-include path="../../partials/header.mjml" />
+    <mj-body mj-class="body">
+        <mj-spacer height="25px" />
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-include path="../../partials/logo.mjml" />
+                <mj-text mj-class="title">${{ lang.hi }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title">${{ lang.newsletter_subscription }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text padding-bottom="15px">${{ lang.regarding_your_newsletter_subscription_we_are_pleased_to_offer_you_the_following_voucher }}$ <strong>{discount}</strong></mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-include path="../../partials/footer.mjml" />
+    </mj-body>
+</mjml>

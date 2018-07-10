@@ -1,0 +1,25 @@
+<mjml>
+    <mj-include path="../../partials/header.mjml" />
+    <mj-body mj-class="body">
+        <mj-spacer height="25px" />
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-include path="../../partials/logo.mjml" />
+                <mj-text mj-class="title">${{ lang.hi }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.product_is_nearly_out_of_stock }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text>${{ lang.the_remaining_stock_is_now_less_than_the_specified_minimum_of }}$ <b>{last_qty}</b>.</mj-text>
+                <mj-spacer height="10px" />
+                <mj-text><b>${{ lang.remaining_stock }}$</b> {qty}</b>
+                </mj-text>
+                <mj-spacer height="10px" />
+                <mj-text padding-bottom="10px">${{ lang.you_are_advised_to_open_the_products_admin_product_page_in_order_to_replenish_your_inventory }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-include path="../../partials/footer.mjml" />
+    </mj-body>
+</mjml>

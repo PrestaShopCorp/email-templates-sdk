@@ -1,0 +1,22 @@
+<mjml>
+    <mj-include path="../../partials/header.mjml" />
+    <mj-body mj-class="body">
+        <mj-spacer height="25px" />
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-include path="../../partials/logo.mjml" />
+                <mj-text mj-class="title">${{ lang.congratulations }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text padding-top="15px">${{ lang.your_referred_friend_sponsored_firstname_sponsored_lastname_has_placed_his_or_her_first_order_on_shop_name }}$</mj-text>
+                <mj-spacer height="10px" />
+                <mj-text>${{ lang.we_are_pleased_to_offer_you_a_voucher_worth_discount_display_voucher__discount_name_that_you_can_use_on_your_next_order }}$</mj-text>
+                <mj-spacer height="10px" />
+                <mj-text padding-bottom="15px">${{ lang.enter_this_code_in_your_shopping_cart_to_get_your_discount }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-include path="../../partials/footer.mjml" />
+    </mj-body>
+</mjml>
