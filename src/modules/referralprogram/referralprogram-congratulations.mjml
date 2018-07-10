@@ -1,10 +1,10 @@
 <mjml>
-    <mj-include path="./partials/header.mjml" />
+    <mj-include path="../../partials/header.mjml" />
     <mj-body mj-class="body">
         <mj-spacer height="25px" />
         <mj-section mj-class="section">
             <mj-column width="100%">
-                <mj-include path="./partials/logo.mjml" />
+                <mj-include path="../../partials/logo.mjml" />
                 <mj-text mj-class="title">${{ lang.congratulations }}$</mj-text>
             </mj-column>
         </mj-section>
@@ -17,6 +17,6 @@
                 <mj-text padding-bottom="15px">${{ lang.enter_this_code_in_your_shopping_cart_to_get_your_discount }}$</mj-text>
             </mj-column>
         </mj-section>
-        <mj-include path="./partials/footer.mjml" />
+        <mj-include path="../../partials/footer.mjml" />
     </mj-body>
 </mjml>

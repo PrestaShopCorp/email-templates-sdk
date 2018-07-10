@@ -8,7 +8,7 @@
   "{{$instagram_link}}": "https://www.instagram.com/prestashop/",
   "{{$youtube_link}}": "https://www.youtube.com/user/prestashop/",
   "{{$pinterest_link}}": "https://www.pinterest.com/prestashop/",
-  "{shop_logo}": "../../../src/config/logo.png",
+  "{shop_logo}": "./src/config/logo.png",
   "{shop_name}": "PrestaShop",
   "{firstname}": "John",
   "{lastname}": "Doe",
