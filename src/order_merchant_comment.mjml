@@ -1,31 +1,23 @@
 <mjml>
-    <mj-include path="./src/partials/header.mjml" />
-    <mj-body>
-        <mj-container mj-class="body">
-
-            <mj-spacer height="25px" />
-
-            <mj-section mj-class="section">
-                <mj-column width="100%">
-
-                    <mj-include path="./src/partials/logo.mjml" />
-
-                    <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-section mj-class="section">
-                <mj-column mj-class="background-hero">
-                    <mj-text mj-class="title-hero">${{ lang.message_from_shop_name }}$</mj-text>
-                    <mj-divider mj-class="title-divider-hero"></mj-divider>
-                    <mj-text>${{ lang.you_have_received_a_new_message_from_shop_name_regarding_order_with_the_reference_order_name }}$</mj-text>
-                    <mj-spacer height="20px" />
-                    <mj-textfont-weight="bold">${{ lang.message }}$</mj-text>
-                    <mj-text padding-bottom="15px">{message}</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-include path="./src/partials/footer.mjml" />
-        </mj-container>
+    <mj-include path="./partials/header.mjml" />
+    <mj-body mj-class="body">
+        <mj-spacer height="25px" />
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-include path="./partials/logo.mjml" />
+                <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.message_from_shop_name }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text>${{ lang.you_have_received_a_new_message_from_shop_name_regarding_order_with_the_reference_order_name }}$</mj-text>
+                <mj-spacer height="20px" />
+                <mj-text font-weight="bold">${{ lang.message }}$</mj-text>
+                <mj-text padding-bottom="15px">{message}</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-include path="./partials/footer.mjml" />
     </mj-body>
 </mjml>

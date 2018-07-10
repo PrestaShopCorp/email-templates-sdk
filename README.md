@@ -8,7 +8,7 @@ You first need to install [Node.js](https://nodejs.org).
 
 Install Gulp:
 
-`npm install -g gulp`
+`npm install gulp-cli -g`
 
 Download or clone the repository
 
@@ -39,7 +39,7 @@ To install the emails on PrestaShop, you need to build a package:
 
 This will create a zip file in `./dist/` with the name you set in the `./src/config/settings.json`.
 
-To install the zip file that contains the emails, you need to use the Emails Manager available in the PrestaShop back office (soon).
+To install the zip file that contains the emails, you need to use the Emails Manager available in the PrestaShop back office.
 This is also this file you will need to submit on [PrestaShop Addons](https://addons.prestashop.com) if you want to sell it.
 The emails are translated by the module during the installation and the dynamic variables & conditions are processed (see "Dynamic variables" and "Conditions" for more information).
 
@@ -132,6 +132,15 @@ MJML lets you custom every components with attributes and we really recommend yo
 Another good example is the `order_conf.html` email. On PrestaShop 1.5, the products list is hard coded and you can't change the HTML so you will need to custom the style. You will have to do it in the global CSS. Take a look at the default template for an example.
 
 Starting 1.6, tpl files are used in the `order_conf.html` and we provide a better version in this SDK. You can edit the files as much as you want, they will replace the default files.
+
+## MJML 4
+
+We now use MJMl 4 to build the emails. If you built your emails with an older version, you need to migrate them to MJML 4. To do this, a task is available to smooth the transition.
+
+`gulp mjml:migrate`
+
+If you want to know more about what's new and the breaking changes, you can read [this article](https://medium.com/mjml-making-responsive-email-easy/mjml-turns-2-and-levels-up-with-a-new-version-mjml-v4-d3f59b752ae6).
+
 
 ## Tests & Compatibility
 

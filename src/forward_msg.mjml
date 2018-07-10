@@ -1,31 +1,24 @@
 <mjml>
-    <mj-include path="./src/partials/header.mjml" />
-    <mj-body>
-        <mj-container mj-class="body">
-
-            <mj-spacer height="25px" />
-
-            <mj-section mj-class="section">
-                <mj-column width="100%">
-
-                    <mj-include path="./src/partials/logo.mjml" />
-
-                    <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-section mj-class="section">
-                <mj-column mj-class="background-hero">
-                    <mj-text mj-class="title-hero">${{ lang.customer_service__forwarded_discussion }}$</mj-text>
-                    <mj-divider mj-class="title-divider-hero"></mj-divider>
-                    <mj-text>${{ lang.employee_wanted_to_forward_this_discussion_to_you }}$</mj-text>
-                    <mj-textfont-weight="bold">${{ lang.discussion_history }}$</b></mj-text>
-                    <mj-text padding="2px 15px 20px">{messages}</mj-text>
-                    <mj-text padding-bottom="15px">${{ lang.employee_added_comment }}$</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-include path="./src/partials/footer.mjml" />
-        </mj-container>
+    <mj-include path="./partials/header.mjml" />
+    <mj-body mj-class="body">
+        <mj-spacer height="25px" />
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-include path="./partials/logo.mjml" />
+                <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.customer_service__forwarded_discussion }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text>${{ lang.employee_wanted_to_forward_this_discussion_to_you }}$</mj-text>
+                <mj-text font-weight="bold">${{ lang.discussion_history }}$</b>
+                </mj-text>
+                <mj-text padding="2px 15px 20px">{messages}</mj-text>
+                <mj-text padding-bottom="15px">${{ lang.employee_added_comment }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-include path="./partials/footer.mjml" />
     </mj-body>
 </mjml>
