@@ -1,32 +1,25 @@
 <mjml>
-    <mj-include path="./src/partials/header.mjml" />
-    <mj-body>
-        <mj-container mj-class="body">
-
-            <mj-spacer height="25px" />
-
-            <mj-section mj-class="section">
-                <mj-column width="100%">
-
-                    <mj-include path="./src/partials/logo.mjml" />
-
-                    <mj-text mj-class="title">${{ lang.congratulations }}$</mj-text>
-                    <mj-text mj-class="subtitle">${{ lang.a_new_order_was_placed_on_shop_name_by_the_following_customer_firstname_lastname_email }}$</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-section mj-class="section">
-                <mj-column mj-class="background-hero">
-                    <mj-text mj-class="title-hero">${{ lang.order_details }}$</mj-text>
-                    <mj-divider mj-class="title-divider-hero"></mj-divider>
-                    <mj-text><strong>${{ lang.order }}$</strong> {order_name} ${{ lang.placed_on }}$ {date}</mj-text>
-                    <mj-text padding-bottom="15px"><strong>${{ lang.payment }}$</strong> {payment}</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-section mj-class="section">
-                <mj-column>
-                    <mj-html>
+    <mj-include path="./partials/header.mjml" />
+    <mj-body mj-class="body">
+        <mj-spacer height="25px" />
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-include path="./partials/logo.mjml" />
+                <mj-text mj-class="title">${{ lang.congratulations }}$</mj-text>
+                <mj-text mj-class="subtitle">${{ lang.a_new_order_was_placed_on_shop_name_by_the_following_customer_firstname_lastname_email }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.order_details }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text><strong>${{ lang.order }}$</strong> {order_name} ${{ lang.placed_on }}$ {date}</mj-text>
+                <mj-text padding-bottom="15px"><strong>${{ lang.payment }}$</strong> {payment}</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column>
+                <mj-raw>
                     <table class="table table-recap" padding="0" bgcolor="#f8f8f8" style="width:100%;border-collapse:collapse;font-family:Open-sans, Helvetica, Arial, sans-serif;" role="presentation">
                         <tr>
                             <th style="border:1px solid #D6D4D4;padding: 10px;">${{ lang.reference }}$</th>
@@ -91,43 +84,38 @@
                             </td>
                         </tr>
                     </table>
-                    <mj-html>
-                </mj-column>
-            </mj-section>
-
-            <mj-section mj-class="section">
-                <mj-column mj-class="background-hero">
-                    <mj-text mj-class="title-hero">${{ lang.shipping }}$</mj-text>
-                    <mj-divider mj-class="title-divider-hero"></mj-divider>
-                    <mj-text padding-bottom="15px"><strong>${{ lang.carrier }}$</strong> {carrier}</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-section mj-class="section">
-                <mj-column mj-class="background-hero" width="48%">
-                    <mj-text mj-class="title-hero">${{ lang.delivery_address }}$</mj-text>
-                    <mj-divider mj-class="title-divider-hero"></mj-divider>
-                    <mj-text padding-bottom="15px">{delivery_block_html}</mj-text>
-                </mj-column>
-                <mj-column width="4%">
-                    <mj-spacer height="20px" />
-                </mj-column>
-                <mj-column mj-class="background-hero" width="48%">
-                    <mj-text mj-class="title-hero">${{ lang.billing_address }}$</mj-text>
-                    <mj-divider mj-class="title-divider-hero"></mj-divider>
-                    <mj-text padding-bottom="15px">{invoice_block_html}</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-section mj-class="section">
-                <mj-column mj-class="background-hero">
-                    <mj-text mj-class="title-hero">${{ lang.customer_message }}$</mj-text>
-                    <mj-divider mj-class="title-divider-hero"></mj-divider>
-                    <mj-text padding-bottom="15px">{message}</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-include path="./src/partials/footer.mjml" />
-        </mj-container>
+                </mj-raw>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.shipping }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text padding-bottom="15px"><strong>${{ lang.carrier }}$</strong> {carrier}</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero" width="48%">
+                <mj-text mj-class="title-hero">${{ lang.delivery_address }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text padding-bottom="15px">{delivery_block_html}</mj-text>
+            </mj-column>
+            <mj-column width="4%">
+                <mj-spacer height="20px" />
+            </mj-column>
+            <mj-column mj-class="background-hero" width="48%">
+                <mj-text mj-class="title-hero">${{ lang.billing_address }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text padding-bottom="15px">{invoice_block_html}</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.customer_message }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text padding-bottom="15px">{message}</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-include path="./partials/footer.mjml" />
     </mj-body>
 </mjml>

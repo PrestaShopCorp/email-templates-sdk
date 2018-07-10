@@ -139,7 +139,8 @@ gulp.task('langs:clean', function () {
 });
 
 gulp.task('mjml:migrate', function () {
-    return gulp.src(['src/*.mjml'])
+    // Excludes partials because they are directly included by other MJML files
+    return gulp.src(['src/**/*.mjml', '!src/partials/*.mjml'])
         .pipe(buffer())
         .pipe(through.obj((file, enc, cb) => {
                 let content = file.contents.toString();
