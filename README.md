@@ -133,6 +133,15 @@ Another good example is the `order_conf.html` email. On PrestaShop 1.5, the prod
 
 Starting 1.6, tpl files are used in the `order_conf.html` and we provide a better version in this SDK. You can edit the files as much as you want, they will replace the default files.
 
+## MJML 4
+
+We now use MJMl 4 to build the emails. If you built your emails with an older version, you need to migrate them to MJML 4. To do this, a task is available to smooth the transition.
+
+`gulp mjml:migrate`
+
+If you want to know more about what's new and the breaking changes, you can read [this article](https://medium.com/mjml-making-responsive-email-easy/mjml-turns-2-and-levels-up-with-a-new-version-mjml-v4-d3f59b752ae6).
+
+
 ## Tests & Compatibility
 
 We recommend you to test your emails with Litmus. On PrestaShop Addons, we will use it to make sure that your emails are valid on the most common email clients, both desktop and mobile. You can also create a few accounts (GMail, Yahoo...) to test it yourself.
