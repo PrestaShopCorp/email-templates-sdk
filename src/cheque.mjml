@@ -29,9 +29,9 @@
                     <mj-divider mj-class="title-divider-hero"></mj-divider>
                     <mj-text>${{ lang.here_are_the_bank_details_for_your_check }}$</mj-text>
                     <mj-text><b>${{ lang.amount }}$</b> {total_paid}</mj-text>
-                    <mj-text><b>${{ lang.payable_to_the_order_of }}$</b> {cheque_name}</mj-text>
+                    <mj-text><b>${{ lang.payable_to_the_order_of }}$</b> {check_name}</mj-text>
                     <mj-text font-weight="bold">${{ lang.please_mail_your_check_to }}$</mj-text>
-                    <mj-text padding-bottom="15px">{cheque_address_html}</mj-text>
+                    <mj-text padding-bottom="15px">{check_address_html}</mj-text>
                 </mj-column>
             </mj-section>
 
