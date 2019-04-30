@@ -139,6 +139,7 @@ gulp.task('langs:clean', function () {
 gulp.task('mjml:migrate', function () {
     return gulp.src(['src/*.mjml'])
         .pipe(buffer())
+        .pipe(replace(/<(\/?)mj-html/g, '<$1mj-raw'))
         .pipe(through.obj((file, enc, cb) => {
                 let content = file.contents.toString();
                 if (content.indexOf('<mj-container') >= 0) {
