@@ -147,8 +147,8 @@ gulp.task('mjml:migrate', function () {
                         wrap_attributes_indent_size: 4,
                         end_with_newline: true,
                     });
-                    file = file.clone()
-                    file.contents = new Buffer(content)
+                    file = file.clone();
+                    file.contents = Buffer.from(content);
                 }
 
                 return cb(null, file);
