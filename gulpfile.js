@@ -8,7 +8,6 @@ var replace_task = require('gulp-replace-task');
 var ext_replace = require('gulp-ext-replace');
 var zip = require('gulp-zip');
 var replace = require('gulp-replace');
-var rename = require("gulp-rename");
 var fs = require('fs');
 var del = require('del');
 var through = require('through2');
@@ -121,9 +120,9 @@ gulp.task('build', gulp.series('build:clean', gulp.parallel('build:copy:settings
 
 // Watch changes
 gulp.task('watch', function () {
-    gulp.watch('src/**/*.mjml', ['build:dev']);
-    gulp.watch('src/css/global.css', ['build:dev']);
-    gulp.watch('src/config/fake.json', ['build:dev']);
+    gulp.watch('src/**/*.mjml', gulp.series('build:dev'));
+    gulp.watch('src/css/global.css', gulp.series('build:dev'));
+    gulp.watch('src/config/fake.json', gulp.series('build:dev'));
 });
 
 // Remove previously downloaded langs
@@ -133,12 +132,11 @@ gulp.task('langs:clean', function () {
 
 // Download translations
 gulp.task('langs:dl', gulp.series('langs:clean', function () {
-    ['en', 'fr', 'es'].forEach(function(lang) {
-        download('http://api.addons.prestashop.com/index.php?version=1&method=translations&type=emails&iso_lang='+lang)
-        .pipe(buffer())
-        .pipe(rename("lang.json"))
-        .pipe(gulp.dest('langs/'+lang+'/'));
-    })
+    return download(['en', 'fr', 'es'].map(lang => ({
+        file: `${lang}/lang.json`,
+        url: `https://api.addons.prestashop.com/index.php?version=1&method=translations&type=emails&iso_lang=${lang}`
+    })))
+        .pipe(gulp.dest(`langs/`));
 }));
 
 gulp.task('mjml:migrate', function () {
