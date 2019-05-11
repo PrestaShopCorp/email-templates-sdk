@@ -1,41 +1,32 @@
 <mjml>
-    <mj-include path="./src/partials/header.mjml" />
-    <mj-body>
-        <mj-container mj-class="body">
-
-            <mj-spacer height="25px" />
-
-            <mj-section mj-class="section">
-                <mj-column width="100%">
-
-                    <mj-include path="./src/partials/logo.mjml" />
-
-                    <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
-                    <mj-text mj-class="subtitle">${{ lang.thank_you_for_shopping_with_shop_name }}$</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-section mj-class="section">
-                <mj-column mj-class="background-hero">
-                    <mj-text mj-class="title-hero">${{ lang.order_order_name }}$ - ${{ lang.awaiting_wire_payment }}$</mj-text>
-                    <mj-divider mj-class="title-divider-hero"></mj-divider>
-                    <mj-text padding-bottom="15px">${{ lang.your_order_with_the_reference_order_name_has_been_placed_successfully_and_will_be_shipped_as_soon_as_we_receive_your_payment }}$</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-section mj-class="section">
-                <mj-column mj-class="background-hero">
-                    <mj-text mj-class="title-hero">${{ lang.you_have_selected_to_pay_by_wire_transfer }}$</mj-text>
-                    <mj-divider mj-class="title-divider-hero"></mj-divider>
-                    <mj-text>${{ lang.here_are_the_bank_details_for_your_transfer }}$</mj-text>
-                    <mj-text><b>${{ lang.amount }}$</b> {total_paid}</mj-text>
-                    <mj-text><b>${{ lang.account_owner }}$</b> {bankwire_owner}</mj-text>
-                    <mj-text><b>${{ lang.account_details }}$</b> {bankwire_details}</mj-text>
-                    <mj-text padding-bottom="15px"><b>${{ lang.bank_address }}$</b> {bankwire_address}</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-include path="./src/partials/footer.mjml" />
-        </mj-container>
+    <mj-include path="./partials/header.mjml" />
+    <mj-body mj-class="body">
+        <mj-spacer height="25px" />
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-include path="./partials/logo.mjml" />
+                <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+                <mj-text mj-class="subtitle">${{ lang.thank_you_for_shopping_with_shop_name }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.order_order_name }}$ - ${{ lang.awaiting_wire_payment }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text padding-bottom="15px">${{ lang.your_order_with_the_reference_order_name_has_been_placed_successfully_and_will_be_shipped_as_soon_as_we_receive_your_payment }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.you_have_selected_to_pay_by_wire_transfer }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text>${{ lang.here_are_the_bank_details_for_your_transfer }}$</mj-text>
+                <mj-text><b>${{ lang.amount }}$</b> {total_paid}</mj-text>
+                <mj-text><b>${{ lang.account_owner }}$</b> {bankwire_owner}</mj-text>
+                <mj-text><b>${{ lang.account_details }}$</b> {bankwire_details}</mj-text>
+                <mj-text padding-bottom="15px"><b>${{ lang.bank_address }}$</b> {bankwire_address}</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-include path="./partials/footer.mjml" />
     </mj-body>
 </mjml>
