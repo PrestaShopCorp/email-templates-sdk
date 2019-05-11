@@ -105,14 +105,19 @@ gulp.task('build:copy:settings', function() {
 });
 
 // Compress folder
-gulp.task('build:compress', ['build:copy:settings', 'build:mjml', 'build:copy:tpl', 'build:copy:img', 'build:copy:preview'], function() {
+gulp.task('build:compress', function() {
     return gulp.src('./dist/'+settings.name+'/**/*')
                         .pipe(zip(settings.name+'.zip'))
                         .pipe(gulp.dest('./dist/'));
 });
 
+// Remove dist
+gulp.task('build:clean', function () {
+    return del(['dist']);
+});
+
 // Copy images in dist folder
-gulp.task('build', ['build:copy:settings', 'build:mjml', 'build:copy:img', 'build:copy:preview', 'build:copy:tpl', 'build:compress']);
+gulp.task('build', gulp.series('build:clean', gulp.parallel('build:copy:settings', 'build:mjml', 'build:copy:img', 'build:copy:preview', 'build:copy:tpl'), 'build:compress'));
 
 // Watch changes
 gulp.task('watch', function () {
@@ -121,20 +126,20 @@ gulp.task('watch', function () {
     gulp.watch('src/config/fake.json', ['build:dev']);
 });
 
+// Remove previously downloaded langs
+gulp.task('langs:clean', function () {
+    return del(['langs']);
+});
+
 // Download translations
-gulp.task('langs:dl', ['langs:clean'], function () {
+gulp.task('langs:dl', gulp.series('langs:clean', function () {
     ['en', 'fr', 'es'].forEach(function(lang) {
         download('http://api.addons.prestashop.com/index.php?version=1&method=translations&type=emails&iso_lang='+lang)
         .pipe(buffer())
         .pipe(rename("lang.json"))
         .pipe(gulp.dest('langs/'+lang+'/'));
     })
-});
-
-// Remove previously downloaded langs
-gulp.task('langs:clean', function () {
-    return del(['langs']);
-});
+}));
 
 gulp.task('mjml:migrate', function () {
     return gulp.src(['src/*.mjml'])
@@ -159,4 +164,4 @@ gulp.task('mjml:migrate', function () {
 });
 
 // Run all tasks if no args
-gulp.task('default', ['watch']);
+gulp.task('default', gulp.series('watch'));
