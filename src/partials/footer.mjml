@@ -17,5 +17,5 @@
     <mj-column>
         <mj-divider mj-class="divider" padding="10px 0px"></mj-divider>
         <mj-text align="center">${{ lang.shop_name_powered_by_prestashop }}$</mj-text>
-    <mj-column>
+    </mj-column>
 </mj-section>
