@@ -1,26 +1,15 @@
 <mjml>
-    <mj-include path="./src/partials/header.mjml" />
-    <mj-body>
-        <mj-container mj-class="body">
-
-            <mj-spacer height="25px" />
-
-            <mj-section mj-class="section">
-                <mj-column width="100%">
-
-                    <mj-include path="./src/partials/logo.mjml" />
-
-                    <mj-text mj-class="title">${{ lang.hello }}$</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-section background-color="white" padding="30px">
-                <mj-column mj-class="background-hero">
-                    <mj-text>${{ lang.this_is_a_test_email_from_your_shop_if_you_can_read_this_the_test_was_successful }}$</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-include path="./src/partials/footer.mjml" />
-        </mj-container>
+    <mj-body mj-class="body">
+        <mj-spacer height="25px"></mj-spacer>
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-text mj-class="title">${{ lang.hello }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section background-color="white" padding="30px">
+            <mj-column mj-class="background-hero">
+                <mj-text>${{ lang.this_is_a_test_email_from_your_shop_if_you_can_read_this_the_test_was_successful }}$</mj-text>
+            </mj-column>
+        </mj-section>
     </mj-body>
 </mjml>

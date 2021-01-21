@@ -1,30 +1,19 @@
 <mjml>
-    <mj-include path="./src/partials/header.mjml" />
-    <mj-body>
-        <mj-container mj-class="body">
-
-            <mj-spacer height="25px" />
-
-            <mj-section mj-class="section">
-                <mj-column width="100%">
-
-                    <mj-include path="./src/partials/logo.mjml" />
-
-                    <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-section mj-class="section">
-                <mj-column mj-class="background-hero">
-                    <mj-text mj-class="title-hero">${{ lang.you_have_received_a_new_log_alert }}$</mj-text>
-                    <mj-divider mj-class="title-divider-hero"></mj-divider>
-                    <mj-text>${{ lang.warning_you_have_received_a_new_log_alert_in_your_back_office }}$</mj-text>
-                    <mj-spacer height="20px" />
-                    <mj-text padding-bottom="15px">${{ lang.you_can_check_for_it_in_the_tools__logs_section_of_your_back_office }}$</mj-text>
-                </mj-column>
-            </mj-section>
-
-            <mj-include path="./src/partials/footer.mjml" />
-        </mj-container>
+    <mj-body mj-class="body">
+        <mj-spacer height="25px"></mj-spacer>
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.you_have_received_a_new_log_alert }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text>${{ lang.warning_you_have_received_a_new_log_alert_in_your_back_office }}$</mj-text>
+                <mj-spacer height="20px"></mj-spacer>
+                <mj-text padding-bottom="15px">${{ lang.you_can_check_for_it_in_the_tools__logs_section_of_your_back_office }}$</mj-text>
+            </mj-column>
+        </mj-section>
     </mj-body>
 </mjml>
