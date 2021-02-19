@@ -136,3 +136,11 @@ Starting 1.6, tpl files are used in the `order_conf.html` and we provide a bette
 ## Tests & Compatibility
 
 We recommend you to test your emails with Litmus. On PrestaShop Addons, we will use it to make sure that your emails are valid on the most common email clients, both desktop and mobile. You can also create a few accounts (GMail, Yahoo...) to test it yourself.
+
+## Specific to this fork
+
+- Update to MJML 4
+- Update to Gulp 4
+- Add support for multi themes
+
+Gulp won't look in src/ but in every src/foo, if you work with only one theme, you still need to put it in a subfolder. 

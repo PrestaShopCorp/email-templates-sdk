@@ -1,0 +1,19 @@
+<mjml>
+    <mj-body mj-class="body">
+        <mj-spacer height="25px"></mj-spacer>
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.order_order_name }}$ - ${{ lang.payment_processed }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text>${{ lang.your_payment_for_order_with_the_reference_order_name_was_successfully_processed }}$</mj-text>
+                <mj-spacer height="20px"></mj-spacer>
+                <mj-text padding-bottom="15px">${{ lang.thank_you_for_shopping_with_shop_name }}$</mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

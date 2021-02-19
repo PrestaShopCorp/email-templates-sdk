@@ -1,0 +1,20 @@
+<mjml>
+    <mj-body mj-class="body">
+        <mj-spacer height="25px"></mj-spacer>
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-text mj-class="title">${{ lang.message_from_a_shop_name_customer }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text padding="15px 15px 2px" font-weight="bold">${{ lang.message }}$</mj-text>
+                <mj-text>{message}</mj-text>
+                <mj-spacer height="20px"></mj-spacer>
+                <mj-text><b>${{ lang.order_id }}$</b> {order_name}</mj-text>
+                <mj-text><b>${{ lang.product }}$</b> {product_name}</mj-text>
+                <mj-text padding-bottom="15px"><b>${{ lang.attached_file }}$</b> {attached_file}</mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

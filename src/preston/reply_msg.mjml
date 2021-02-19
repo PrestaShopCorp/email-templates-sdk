@@ -1,0 +1,22 @@
+<mjml>
+    <mj-body mj-class="body">
+        <mj-spacer height="25px"></mj-spacer>
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section background-color="white" padding="30px">
+            <mj-column mj-class="background-hero">
+                <mj-text>{reply}</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-text padding="0px 15px" font-size="13px">${{ lang.please_do_not_reply_directly_to_this_email_we_will_not_receive_it }}$</mj-text>
+                <mj-spacer height="10px"></mj-spacer>
+                <mj-text padding="0px 15px" font-size="13px">${{ lang.in_order_to_reply_please_use_the_following_link_link }}$</mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

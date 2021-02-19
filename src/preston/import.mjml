@@ -1,0 +1,17 @@
+<mjml>
+    <mj-body mj-class="body">
+        <mj-spacer height="25px"></mj-spacer>
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.import_complete }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text padding-bottom="15px">${{ lang.the_file_filename_has_been_successfully_imported_to_your_shop }}$</mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

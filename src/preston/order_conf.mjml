@@ -1,0 +1,46 @@
+<mjml>
+    <mj-body mj-class="body">
+        <mj-spacer height="25px"></mj-spacer>
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+                <mj-text mj-class="subtitle">${{ lang.thank_you_for_shopping_with_shop_name }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.order_details }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text><strong>${{ lang.order }}$</strong> {order_name} ${{ lang.placed_on }}$ {date}</mj-text>
+                <mj-text padding-bottom="15px"><strong>${{ lang.payment }}$</strong> {payment}</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column>
+                <mj-raw></mj-raw>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero">
+                <mj-text mj-class="title-hero">${{ lang.shipping }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text padding-bottom="15px"><strong>${{ lang.carrier }}$</strong> {carrier}</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column mj-class="background-hero" width="48%">
+                <mj-text mj-class="title-hero">${{ lang.delivery_address }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text padding-bottom="15px">{delivery_block_html}</mj-text>
+            </mj-column>
+            <mj-column width="4%">
+                <mj-spacer height="20px"></mj-spacer>
+            </mj-column>
+            <mj-column mj-class="background-hero" width="48%">
+                <mj-text mj-class="title-hero">${{ lang.billing_address }}$</mj-text>
+                <mj-divider mj-class="title-divider-hero"></mj-divider>
+                <mj-text padding-bottom="15px">{invoice_block_html}</mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

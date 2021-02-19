@@ -1,0 +1,15 @@
+<mjml>
+    <mj-body mj-class="body">
+        <mj-spacer height="25px"></mj-spacer>
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-text mj-class="title">${{ lang.hi_firstname_lastname }}$</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section mj-class="section">
+            <mj-column width="100%">
+                <mj-raw>{message}</mj-raw>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>
